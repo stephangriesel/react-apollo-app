@@ -1,6 +1,13 @@
 const axios = require('axios');
 
-const { GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLBoolean, GraphQLList, GraphQLSchema } = require('graphql');
+const { 
+    GraphQLObjectType, 
+    GraphQLInt, 
+    GraphQLString, 
+    GraphQLBoolean, 
+    GraphQLList, 
+    GraphQLSchema 
+} = require('graphql');
 
 // launch type
 const LaunchType = new GraphQLObjectType({
@@ -28,7 +35,7 @@ const RocketType = new GraphQLObjectType({
 
 // root query
 const RootQuery = new GraphQLObjectType({
-    name:'Root Query Type',
+    name:'RootQueryType',
     fields: {
         launches: {
             type: new GraphQLList(LaunchType),
